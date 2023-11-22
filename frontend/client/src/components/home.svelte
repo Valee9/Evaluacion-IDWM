@@ -69,23 +69,25 @@
                 errorData.message
             );
         }
+        window.location.reload();
     }
 
     let originalProductData = {};
     let selectedProduct = null;
     let _id;
-    function modalEdit(_id) {
-        selectedProduct = products.find((product) => product._id === _id);
-        _id = _id;
-        console.log(_id);
-        originalProductData = {
-            name: selectedProduct.name,
-            description: selectedProduct.description,
-            price: selectedProduct.price,
-            image: selectedProduct.image,
-        };
-        isOpen1 = !isOpen1;
-    }
+    function modalEdit(productId) {
+    selectedProduct = products.find((product) => product._id === productId);
+    _id = selectedProduct._id;
+    console.log(_id);
+    originalProductData = {
+        name: selectedProduct.name,
+        description: selectedProduct.description,
+        price: selectedProduct.price,
+        image: selectedProduct.image,
+    };
+    isOpen1 = !isOpen1;
+}
+
 
     function closeModalEdit() {
         isOpen1 = !isOpen1;
@@ -195,7 +197,7 @@
                         <img
                             src={product.image}
                             class="card-img-top w-50 mx-auto"
-                            alt="Castaña de caju"
+                            alt="Producto"
                         />
                         <div class="card-body" style="text-align: center">
                             <h5 class="card-title fw-bold">{product.name}</h5>
