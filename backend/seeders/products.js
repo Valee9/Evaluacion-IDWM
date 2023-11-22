@@ -3,21 +3,9 @@ dotenv.config({path: '../.env'});
 
 export const productsSeeds = [
     {
-        name: "Ricardo",
-        price: "Urvina",
-        description: "123456789",
-        image: "ricky@correo.com",
+        name: "Castaña de caju",
+        price: "1200",
+        description: "Previene el envejecimiento prematuro, ya que es rico en antioxidantes como polifenoles, carotenoides y vitamina E.",
+        image: "https://cdnx.jumpseller.com/espesales/image/12212106/resize/480/480?1626299803.com",
     },
-    {
-        name: "Juan",
-        price: "Perez",
-        description: "207845337",
-        image: "juan@correo.com",
-    },
-    {
-        name: "Vale",
-        price: "Hormazabal",
-        description: "209408775",
-        image: "vale@correo.com",
-    }
 ];
